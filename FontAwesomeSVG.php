@@ -5,7 +5,7 @@ namespace classes;
 use DOMException;
 use Exception;
 
-class FontAwesomeSVG
+class SvgRender
 {
 
     public string $svg_dir;
