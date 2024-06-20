@@ -46,3 +46,23 @@ $postCreator = new WpPostCreator($logger, $gptApiKey, $dalleEndpoint);
 $postCreator->createPosts($processedData);
 
 
+GravityFormAPI
+$api_url         = 'https://yourdomain.it/wp-json/gf/v2';
+	$consumer_key    = 'your key';
+	$consumer_secret = 'your key';
+	$form_id         = '1';
+
+	try {
+
+		$entries = EdinewsGravityFormApi::getFormEntries( $api_url, $consumer_key, $consumer_secret, $form_id );
+		error_log('webdev debug');
+		error_log( var_export( $entries, true ) );
+
+	} catch ( Exception $e ) {
+
+		error_log('webdev debug');
+		error_log( 'Errore: ' . $e->getMessage() );
+
+	}
+
+
